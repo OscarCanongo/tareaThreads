@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.ArrayList;
 public class Consumer implements Runnable{
     private final static Random generator = new Random();
     private final Buffer sharedLocation; // reference to shared object
