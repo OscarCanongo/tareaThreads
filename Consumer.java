@@ -27,17 +27,12 @@ public class Consumer implements Runnable{
                 miObjeto = sharedLocation.get();
                
 
-                if(miObjeto.getCaracter() == '1'){
-                //    odd.add(miObjeto.getNumero());
-                    System.out.println("El valor de odd es "+oddN);
+                if(miObjeto.getCaracter() == "impares"){
                     odd[oddN]=miObjeto.getNumero();
-                    oddN++;
-
-                   
+                    oddN++;  
                }
 
-               else if(miObjeto.getCaracter() == '2'){
-                   
+               else if(miObjeto.getCaracter() == "pares"){
                         even[evenN]=miObjeto.getNumero();
                         evenN++;
                 }

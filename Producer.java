@@ -20,7 +20,7 @@ public class Producer implements Runnable
                     try { // sleep 0 to 3 seconds, then place value in Buffer  
                                 
                         Thread.sleep( generator.nextInt( 3000 ) ); // random sleep
-                        Objeto miObjeto = new Objeto(sum, '1');  
+                        Objeto miObjeto = new Objeto(sum, "impares");  
                         sum+=1;
                         
 
@@ -38,7 +38,7 @@ public class Producer implements Runnable
                 for ( int count = 1; count <= 10; count++ ){
                     try { // sleep 0 to 3 seconds, then place value in Buffer            
                         Thread.sleep( generator.nextInt( 3000 ) ); // random sleep
-                        Objeto miObjeto = new Objeto(sum, '2');
+                        Objeto miObjeto = new Objeto(sum, "pares");
                         // sharedLocation.set(sum); // set value in buffer
                         sum+=2;
                         sharedLocation.set( miObjeto );
@@ -57,7 +57,7 @@ public class Producer implements Runnable
                         Thread.sleep( generator.nextInt( 3000 ) ); // random sleep
                         // sharedLocation.set( primos[count-1]); // set value in buffer
 
-                        Objeto miObjeto = new Objeto(primos[count-1], '3');
+                        Objeto miObjeto = new Objeto(primos[count-1], "primos");
                         sharedLocation.set( miObjeto );
                         //System.out.println("Productor produce: " + primos[count-1]);
                     } // end try

@@ -1,9 +1,9 @@
 public class Objeto{
   public int numero;
-  public char caracter;
+  public String caracter;
 
   //Constructor
-  public Objeto(int numero, char caracter){
+  public Objeto(int numero, String caracter){
     this.numero = numero;
     this.caracter = caracter;
   }
@@ -13,7 +13,7 @@ public class Objeto{
     this.numero = numero;
   }
 
-  public void setCaracter(char caracter){
+  public void setCaracter(String caracter){
     this.caracter = caracter;
   }
 
@@ -22,7 +22,7 @@ public class Objeto{
     return numero;
   }
 
-  public char getCaracter(){
+  public String getCaracter(){
     return caracter;
   }
 }

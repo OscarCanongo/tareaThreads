@@ -13,7 +13,7 @@ public class BlockingBuffer implements Buffer{
         buffer.put( miObjeto ); // place value in buffer
         //System.out.printf( "%s%2d\t%s%d\n", "Producer writes ", value,
             //"Buffer cells occupied: ", buffer.size() );
-        System.out.println("Producer " + miObjeto.getCaracter()+ " produces "+ miObjeto.getNumero());
+        System.out.println("Producer produces "+ miObjeto.getNumero());
     } // end method set
 
     // return value from buffer
