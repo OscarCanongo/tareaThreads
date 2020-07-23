@@ -6,7 +6,7 @@ public class Main{
         // create new thread pool with two threads
         ExecutorService application = Executors.newCachedThreadPool();
         // create UnsynchronizedBuffer to store ints
-        Buffer sharedLocation = new BlockingBuffer();
+        Buffer sharedLocation = new SynchronizedBuffer();
         // execute the Producer and Consumer, giving each of them access
         // to sharedLocation
         application.execute( new Producer( sharedLocation,1 ) );
