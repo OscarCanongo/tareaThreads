@@ -4,9 +4,13 @@ public class Consumer implements Runnable{
     private final static Random generator = new Random();
     private final Buffer sharedLocation; // reference to shared object
 
-    public ArrayList<Integer> odd = new ArrayList<Integer>();
-    public ArrayList<Integer> even= new ArrayList<Integer>();
-    public ArrayList<Integer> prime = new ArrayList<Integer>();
+   
+    public int[] even = new int[10];
+    public int[] odd = new int[10];
+    public int[] prime = new int[10];
+    public int oddN=0;
+    public int primeN=0;
+    public int evenN=0;
 
 
     // constructor
@@ -22,17 +26,26 @@ public class Consumer implements Runnable{
             try{
                 Thread.sleep( generator.nextInt( 3000 ) );
                 miObjeto = sharedLocation.get();
-              
+               
+
                 if(miObjeto.getCaracter() == '1'){
-                   odd.add(miObjeto.getNumero());
+                //    odd.add(miObjeto.getNumero());
+                    System.out.println("El valor de odd es "+oddN);
+                    odd[oddN]=miObjeto.getNumero();
+                    oddN++;
+
+                   
                }
 
                else if(miObjeto.getCaracter() == '2'){
-                even.add(miObjeto.getNumero());
+                   
+                        even[evenN]=miObjeto.getNumero();
+                        evenN++;
                 }
 
                 else{
-                    prime.add(miObjeto.getNumero());
+                    prime[primeN]=miObjeto.getNumero();
+                    primeN++;
                 }
 
                 
@@ -47,19 +60,19 @@ public class Consumer implements Runnable{
         // System.out.println("Consumer read values totaling");
         System.out.println("Los valores del arreglo de impares son:");
         for(int i=0;i<10;i++){
-            System.out.print(" "+odd.get(i));
+            System.out.print(" "+odd[i]);
         }
         
         System.out.println();
         System.out.println("Los valores del arreglo de pares son:");
         for(int i=0;i<10;i++){
-            System.out.print(" "+even.get(i));
+            System.out.print(" "+even[i]);
         }
 
         System.out.println();
         System.out.println("Los valores del arreglo de primos son:");
         for(int i=0;i<10;i++){
-            System.out.print(" "+prime.get(i));
+            System.out.print(" "+prime[i]);
         }
     } // end method run
 } // end class Consumer
