@@ -1,6 +1,6 @@
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-public class SharedBufferTest{
+public class Main{
     public static void main( String[] args )
     {
         // create new thread pool with two threads

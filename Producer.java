@@ -16,14 +16,12 @@ public class Producer implements Runnable
 
         switch (x) {
             case 1:
-                for ( int count = 1; count <= 10; count++ ){
+                for ( int count = 1; count <= 20; count+=2 ){
                     try { // sleep 0 to 3 seconds, then place value in Buffer  
                                 
                         Thread.sleep( generator.nextInt( 3000 ) ); // random sleep
-                        Objeto miObjeto = new Objeto(sum, "impares");  
-                        sum+=1;
+                        Objeto miObjeto = new Objeto(count, "impares");  
                         
-
                         sharedLocation.set( miObjeto); // set value in buffer
                         //System.out.println("Productor produce: " + sum);
                     } // end try
@@ -69,6 +67,6 @@ public class Producer implements Runnable
             break;    
         }
 
-        System.out.println("Producer done producing\nTerminating Producer" );
+        System.out.println("Productor termino de producir\nTerminando el productor");
     } // end method run
 } // end class Producer
