@@ -1,3 +1,9 @@
+/*
+Begona Montes Gomez A01329896
+Oscar Canongo Vergara A01730443
+Jose Maria Cortes Sarmiento A01731130
+*/
+
 import java.util.Random;
 public class Producer implements Runnable
 {

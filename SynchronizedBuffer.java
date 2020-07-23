@@ -1,3 +1,9 @@
+/*
+Begona Montes Gomez A01329896
+Oscar Canongo Vergara A01730443
+Jose Maria Cortes Sarmiento A01731130
+*/
+
 public class SynchronizedBuffer implements Buffer{
 
   	private Objeto buffer; // shared by producer and consumer threads
